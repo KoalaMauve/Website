@@ -5,13 +5,15 @@
  * A backend API for https://eliteskyblock.com/ that provides Hypixel Skyblock data.
 <br><br>
 Use of this API requires following the [Elite API TOS](https://eliteskyblock.com/apiterms). This API is not affiliated with Hypixel or Mojang.
- * OpenAPI spec version: v1
+ * OpenAPI spec version: admin-v1
  */
 import type { WeightStyleWithDataDtoImage } from './WeightStyleWithDataDtoImage';
+import type { WeightStyleWithDataDtoAuthor } from './WeightStyleWithDataDtoAuthor';
 import type { ImageAttachmentDto } from './ImageAttachmentDto';
 import type { ParentProductDto } from './ParentProductDto';
 import type { WeightStyleWithDataDtoData } from './WeightStyleWithDataDtoData';
 import type { WeightStyleWithDataDtoLeaderboard } from './WeightStyleWithDataDtoLeaderboard';
+import type { WeightStyleWithDataDtoImageRefs } from './WeightStyleWithDataDtoImageRefs';
 
 export interface WeightStyleWithDataDto {
 	id: number;
@@ -37,10 +39,13 @@ export interface WeightStyleWithDataDto {
 	description?: string | null;
 	/** @nullable */
 	image?: WeightStyleWithDataDtoImage;
+	/** @nullable */
+	author?: WeightStyleWithDataDtoAuthor;
 	images: ImageAttachmentDto[];
 	products: ParentProductDto[];
 	/** @nullable */
 	data?: WeightStyleWithDataDtoData;
 	/** @nullable */
 	leaderboard?: WeightStyleWithDataDtoLeaderboard;
+	imageRefs: WeightStyleWithDataDtoImageRefs;
 }
