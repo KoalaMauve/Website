@@ -57,6 +57,17 @@ export const GARDEN_CHIPS: Record<GardenChipId, GardenChipInfo> = {
 		skyblockId: 'SYNTHESIS_GARDEN_CHIP',
 		name: 'Synthesis Chip',
 		wiki: GARDEN_CHIP_WIKI,
+        statsPerRarity: {
+			[Rarity.Rare]: {
+				[Stat.BonusCopperPercentage]: 1,
+			},
+			[Rarity.Epic]: {
+				[Stat.BonusCopperPercentage]: 1.5,
+			},
+			[Rarity.Legendary]: {
+				[Stat.BonusCopperPercentage]: 2,
+			},
+		},
 	},
 	sowledge: {
 		skyblockId: 'SOWLEDGE_GARDEN_CHIP',
